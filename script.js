@@ -23,7 +23,7 @@ if (color.toLowerCase() === 'blue') {
 
 let airspeed = prompt('What Is the Airspeed Velocity of an Unladen Swallow')
 
-let airspeedLower = wiairspeednd.toLowerCase()
+let airspeedLower = airspeed.toLowerCase()
 console.log(`airspeedLower: ${airspeedLower}`)
 
 let science = "nine meters per second"
