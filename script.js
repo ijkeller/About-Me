@@ -44,4 +44,6 @@ if (airspeedLower === arthur.toLowerCase()) {
     (airspeedLower === scienceNumber) ||
     (airspeedLower === empirialScience)) {
     alert(corumStudy2003)
+} else {
+    'You need to rewatch Holy Grail'
 }
