@@ -2,13 +2,59 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    color: hsl(225, 20%, 66%);
+    --color-emphasis: hsl(225, 20%, 71%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 body {
     width: 100vw;
     height: 100vh;
-    margin-left: 20px;
-    margin-right: 20px;
+    padding: 5% 10%;
+    background-color: hsl(216, 65%, 11%);
+    display: grid;
+    grid-template-rows: 15% 70% 15%;
+}
 
+header {
+    grid-row: 1/2;
+}
+
+main {
+    grid-row: 2/3;
+}
+
+footer {
+    grid-row: 3/4;
+}
+
+.title {
+    font-size: 1.4rem;
+}
+
+.inline-text {
+    color: var(--color-emphasis);
+    font-size: 1.25rem;
+}
+
+a {
+    transition: transform .2s ease-in-out;
+}
+
+/* unvisited link */
+a:link {
+    color: hsl(166, 100%, 70%);
+
+}
+
+/* visited link */
+a:visited {
+    color: hsl(166, 100%, 70%);
+}
+
+a:hover {
+    transform: scale(1.05);
 }
