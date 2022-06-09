@@ -22,6 +22,7 @@ body {
 
 header {
     grid-row: 1/2;
+    background-color: hsl(216, 65%, 11%);
 }
 
 main {
@@ -61,20 +62,23 @@ footer {
     grid-column: 3/4;
 }
 
-.dropdown-button {}
-
-.dropdown {}
-
 .dropdown>ul,
 .dropdown>ol {
     visibility: hidden;
     position: absolute;
+    /* transform: translateY(-100%); */
+    z-index: -1;
     margin-top: 10px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    transition: visibility 0s, opacity .5s linear,
+        /* transform 0.5s ease-in-out */
+    ;
 }
 
 .dropdown:hover>ul,
-.dropdown:hover>ol {
+.dropdown:hover>ol,
+.dropdown:focus>ul,
+.dropdown:focus>ol {
+    /* transform: translateY(0); */
     visibility: visible;
     opacity: 1;
 }
