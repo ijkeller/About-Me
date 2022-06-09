@@ -49,14 +49,19 @@ console.log("JavaScript connected")
 // }
 
 let i = 1
-let number = Math.floor(Math.random() * 10)
-for (i; i <= 4 || guess === number; i++) {
+const number = Math.floor(Math.random() * 10)
+console.log(number)
+for (i; i <= 4; i++) {
     let guess = prompt("Guess a number between 1 and 10: ")
-    if (guess === number) {
+    if (guess == number) {
         alert(`Correct! The number was ${number}`)
+        console.log(number)
+        break;
     } else if (guess > number) {
         alert(`${guess} is too high`)
+        console.log(number)
     } else {
         alert(`${guess} is too low`)
+        console.log(number)
     }
 }
