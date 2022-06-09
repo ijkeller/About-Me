@@ -4,6 +4,7 @@
     box-sizing: border-box;
     color: hsl(225, 20%, 66%);
     --color-emphasis: hsl(225, 20%, 71%);
+    --color-link: hsl(166, 100%, 70%);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     font-size: 1rem;
@@ -12,6 +13,7 @@
 
 body {
     width: 100vw;
+    max-width: 1000px;
     height: 100vh;
     padding: 5% 10%;
     background-color: hsl(216, 65%, 11%);
@@ -25,19 +27,68 @@ header {
 
 main {
     grid-row: 2/3;
+    display: grid;
+    grid-template-rows: 30% 70%;
 }
 
 footer {
     grid-row: 3/4;
 }
 
+.main-title {
+    font-size: 1.5rem;
+}
+
 .title {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    color: var(--color-emphasis);
+}
+
+.dropdowns {
+    display: grid;
+    grid-template-columns: auto;
+    padding-top: 10px;
+}
+
+.top-tens {
+    grid-column: 1/2;
+}
+
+.experience {
+    grid-column: 2/3;
+}
+
+.education {
+    grid-column: 3/4;
+}
+
+.dropdown-button {
+    /* margin-top: 10px; */
+}
+
+.dropdown {
+    /* display: none; */
+    position: absolute;
+    margin-top: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-button:hover {
+    color: red;
+}
+
+.dropdown-button:hover .dropdown {
+    display: block;
+}
+
+li {
+    font-size: .9rem;
 }
 
 .inline-text {
     color: var(--color-emphasis);
-    font-size: 1.25rem;
+    font-size: 1.15rem;
+    display: inline;
 }
 
 a {
@@ -46,13 +97,13 @@ a {
 
 /* unvisited link */
 a:link {
-    color: hsl(166, 100%, 70%);
+    color: var(--color-link);
 
 }
 
 /* visited link */
 a:visited {
-    color: hsl(166, 100%, 70%);
+    color: var(--color-link);
 }
 
 a:hover {
