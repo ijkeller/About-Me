@@ -13,7 +13,6 @@
 
 body {
     width: 100vw;
-    max-width: 1000px;
     height: 100vh;
     padding: 5% 10%;
     background-color: hsl(216, 65%, 11%);
@@ -46,7 +45,7 @@ footer {
 
 .dropdowns {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 33% 33% 43%;
     padding-top: 10px;
 }
 
@@ -62,23 +61,22 @@ footer {
     grid-column: 3/4;
 }
 
-.dropdown-button {
-    /* margin-top: 10px; */
-}
+.dropdown-button {}
 
-.dropdown {
-    /* display: none; */
+.dropdown {}
+
+.dropdown>ul,
+.dropdown>ol {
+    visibility: hidden;
     position: absolute;
     margin-top: 10px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
-.dropdown-button:hover {
-    color: red;
-}
-
-.dropdown-button:hover .dropdown {
-    display: block;
+.dropdown:hover>ul,
+.dropdown:hover>ol {
+    visibility: visible;
+    opacity: 1;
 }
 
 li {
