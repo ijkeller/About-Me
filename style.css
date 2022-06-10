@@ -28,7 +28,7 @@ header {
 main {
     grid-row: 2/3;
     display: grid;
-    grid-template-rows: auto;
+    grid-template-rows: 30% 40% 30%;
 }
 
 footer {
@@ -64,7 +64,7 @@ footer {
 
 .dropdown>ul,
 .dropdown>ol,
-.dropdown >p {
+.dropdown>p {
     visibility: hidden;
     position: absolute;
     /* transform: translateY(-100%); */
@@ -80,10 +80,25 @@ footer {
 .dropdown:focus>ul,
 .dropdown:focus>ol,
 .dropdown:hover>p,
-.dropdown:hover>p {
+.dropdown:focus>p {
     /* transform: translateY(0); */
     visibility: visible;
     opacity: 1;
+}
+
+.more {
+    position: relative;
+}
+
+.horizontal-ul {
+    position: absolute;
+    bottom: 2rem;
+    list-style: none;
+    columns: 2;
+}
+
+.horizontal-ul>li {
+    display: inline-block;
 }
 
 li {
@@ -97,6 +112,7 @@ li {
 }
 
 a {
+    text-decoration: none;
     transition: transform .2s ease-in-out;
 }
 
@@ -113,4 +129,5 @@ a:visited {
 
 a:hover {
     transform: scale(1.05);
+    cursor: pointer;
 }
