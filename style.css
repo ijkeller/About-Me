@@ -28,7 +28,7 @@ header {
 main {
     grid-row: 2/3;
     display: grid;
-    grid-template-rows: 30% 70%;
+    grid-template-rows: auto;
 }
 
 footer {
@@ -63,7 +63,8 @@ footer {
 }
 
 .dropdown>ul,
-.dropdown>ol {
+.dropdown>ol,
+.dropdown >p {
     visibility: hidden;
     position: absolute;
     /* transform: translateY(-100%); */
