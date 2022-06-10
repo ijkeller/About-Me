@@ -77,7 +77,9 @@ footer {
 .dropdown:hover>ul,
 .dropdown:hover>ol,
 .dropdown:focus>ul,
-.dropdown:focus>ol {
+.dropdown:focus>ol,
+.dropdown:hover>p,
+.dropdown:hover>p {
     /* transform: translateY(0); */
     visibility: visible;
     opacity: 1;
