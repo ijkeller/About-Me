@@ -1,9 +1,8 @@
-'use strict';
 
-let user2 = prompt('What is your name?');
-alert(`Hello, ${user2}!  You wanted to take a quiz?  Ok...`)
+let user = prompt('What is your name?');
+alert(`Hello, ${user}!  You wanted to take a quiz?  Ok...`)
 
-let correct = 0
+let correct = 1;
 
 let movie = prompt('My favorite movie is the Shawshank Redemption? y or n: ');
 if (movie.toLowerCase() === 'y') {
@@ -30,29 +29,29 @@ if (sudoku.toLowerCase() === 'n') {
     correct++;
 }
 
+let guesses = 0;
+const number = Math.floor(Math.random() * 10)
+for (i = 0; i <= 4; i++) {
+    let guess = prompt("Guess a number between 1 and 10: ")
+    guesses = i;
+    if (guess == number) {
+        alert(`Correct! The number was ${number}`)
+        break;
+    } else if (guess > number) {
+        alert(`${guess} is too high`)
+    } else {
+        alert(`${guess} is too low`)
+    }
+}
+
+alert(`Good game. The number was ${number} and you guessed ${guesses} times.`);
+'use strict';
+
 if (correct >= 3) {
     alert(`Good job, ${user}!  You got ${correct}/5 correct!`)
 } else {
     alert(`Nice try, ${user}.  You got ${correct}/5 correct.`)
 }
-
-// let i = 1
-// const number = Math.floor(Math.random() * 10)
-// console.log(number)
-// for (i; i <= 4; i++) {
-//     let guess = prompt("Guess a number between 1 and 10: ")
-//     if (guess == number) {
-//         alert(`Correct! The number was ${number}`)
-//         console.log(number)
-//         break;
-//     } else if (guess > number) {
-//         alert(`${guess} is too high`)
-//         console.log(number)
-//     } else {
-//         alert(`${guess} is too low`)
-//         console.log(number)
-//     }
-// }
 
 
 
