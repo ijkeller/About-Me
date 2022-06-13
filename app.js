@@ -3,32 +3,28 @@
 let user = prompt('What is your name?');
 alert(`Hello, ${user}!  You wanted to take a quiz?  Ok...`)
 
-let correct = 1;
+let correct = 0;
+
+function check(obj, answer) {
+    if (obj.toLowerCase() === answer) {
+        correct++;
+    }
+}
 
 let movie = prompt('My favorite movie is the Shawshank Redemption? y or n: ');
-if (movie.toLowerCase() === 'y') {
-    correct++;
-}
+check(movie, 'y')
 
 let physiology = prompt('Do I have a degree in Physiology? y or n: ');
-if (physiology.toLowerCase() === 'n') {
-    correct++;
-}
+check(physiology, 'n')
 
 let toes = prompt('Do I have all ten toes? y or n: ')
-if (toes.toLowerCase() === 'y') {
-    correct++;
-}
+check(toes, 'y')
 
 let sudoku = prompt('Do I like to do Sudoku puzzles? y or n: ')
-if (sudoku.toLowerCase() === 'y') {
-    correct++;
-}
+check(sudoku, 'y')
 
 let spain = prompt('Was I born in Spain? y or n: ')
-if (sudoku.toLowerCase() === 'n') {
-    correct++;
-}
+check(spain, 'n')
 
 let guesses = 0;
 const number = Math.floor(Math.random() * 10)
