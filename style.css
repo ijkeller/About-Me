@@ -46,7 +46,7 @@ footer {
 
 .dropdowns {
     display: grid;
-    grid-template-columns: 33% 33% 43%;
+    grid-template-columns: 33% 33% 33%;
     padding-top: 10px;
 }
 
@@ -67,12 +67,9 @@ footer {
 .dropdown>p {
     visibility: hidden;
     position: absolute;
-    /* transform: translateY(-100%); */
     z-index: -1;
     margin-top: 10px;
-    transition: visibility 0s, opacity .5s linear,
-        /* transform 0.5s ease-in-out */
-    ;
+    transition: visibility 0s, opacity .5s linear;
 }
 
 .dropdown:hover>ul,
@@ -81,7 +78,6 @@ footer {
 .dropdown:focus>ol,
 .dropdown:hover>p,
 .dropdown:focus>p {
-    /* transform: translateY(0); */
     visibility: visible;
     opacity: 1;
 }
