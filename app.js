@@ -13,18 +13,23 @@ function check(obj, answer) {
 
 let movie = prompt('My favorite movie is the Shawshank Redemption? y or n: ');
 check(movie, 'y')
+alert(`You responded with ${movie}, ${correct} correct so far.  My favorite movies are Shawshank Redemption and Almost Famous.`)
 
 let physiology = prompt('Do I have a degree in Physiology? y or n: ');
 check(physiology, 'n')
+alert(`You responded with ${physiology}, ${correct} correct so far.  I have a degree in Psychology not Physiology`)
 
 let toes = prompt('Do I have all ten toes? y or n: ')
 check(toes, 'y')
+alert(`You responded with ${toes}, ${correct} correct so far.  Haven't lost any digits yet.  Knock on wood.`)
 
 let sudoku = prompt('Do I like to do Sudoku puzzles? y or n: ')
 check(sudoku, 'y')
+alert(`You responded with ${sudoku}, ${correct} correct so far.  I love Sudoku; I play it every day.`)
 
 let spain = prompt('Was I born in Spain? y or n: ')
 check(spain, 'n')
+alert(`You responded with ${spain}, ${correct} correct so far.  I was not born in Spain, I was born in Germany.`)
 
 let guesses = 0;
 const number = Math.floor(Math.random() * 10)
