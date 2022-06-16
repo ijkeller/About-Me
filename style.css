@@ -65,7 +65,7 @@ footer {
 .dropdown>ul,
 .dropdown>ol,
 .dropdown>p {
-    visibility: hidden;
+    /* visibility: hidden; */
     position: absolute;
     z-index: -1;
     margin-top: 10px;
